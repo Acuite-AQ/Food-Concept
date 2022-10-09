@@ -57,20 +57,31 @@
 
 }
 
-h3, h4 {
+h3,
+h4 {
     @include margin-base-left;
 }
 
 .restaurants {
     margin-left: 25px;
+    @media all and (min-width: 1024px) {
+        margin-left: 90px;
+    }
 }
 
-.homepage-title, .homepage-welcome {
+.title-tutoriel {
+    @media all and (min-width: 1024px) {
+        margin-left: 80px;
+    }
+}
+.homepage-title,
+.homepage-welcome {
     justify-content: center;
     text-align: center;
     margin-top: 5px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 25px;
 }
 
 .accueil-site {
@@ -80,15 +91,16 @@ h3, h4 {
 
 .intro-size {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 1px;
 }
 
 .section-restaurant {
-    height: auto;
+    height: 1160px;
     width: auto;
     padding-top: 30px;
+
     @media all and (min-width: 1024px) {
-        // display: flex;
+        height: auto;
     }
 }
 
@@ -96,6 +108,17 @@ h3, h4 {
     @media all and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+.tuto-step-flex {
+    @media all and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        margin-left: 55px;
+        margin-right: 55px;
     }
 }
 
@@ -118,7 +141,9 @@ h3, h4 {
     &:hover {
         background-color: #F5EDFF;
 
-        .fa-mobile-screen-button, .fa-list,.fa-store {
+        .fa-mobile-screen-button,
+        .fa-list,
+        .fa-store {
             color: $color-primary;
 
             &:hover {
@@ -128,7 +153,9 @@ h3, h4 {
     }
 }
 
-.fa-mobile-screen-button, .fa-list, .fa-store {
+.fa-mobile-screen-button,
+.fa-list,
+.fa-store {
     color: #7E7E7E;
     margin-right: 15px;
     margin-left: 10px;
@@ -137,8 +164,9 @@ h3, h4 {
 .tuto-step {
     display: flex;
     align-items: center;
+
     @media all and (min-width: 1024px) {
-        flex:1;
+        flex: 1;
     }
 }
 
@@ -147,7 +175,9 @@ h3, h4 {
 //     align-items: center;
 // }
 
-.fa-1, .fa-2, .fa-3 {
+.fa-1,
+.fa-2,
+.fa-3 {
     color: white;
     width: 20px;
     height: 20px;

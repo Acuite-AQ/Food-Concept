@@ -31,7 +31,6 @@ p {
   background-color: #F6F6F6;
   margin-left: -10px;
   margin-right: -10px;
-  height: 105%;
 }
 
 .bg-grey-simple {
@@ -116,6 +115,12 @@ p {
   font-size: 18px;
   margin-left: 20px;
 }
+@media all and (min-width: 1024px) {
+  .section-header .arrow-return {
+    margin-left: 70px;
+    font-size: 28px;
+  }
+}
 
 .logo-header {
   display: flex;
@@ -123,7 +128,7 @@ p {
   margin-right: auto;
   padding-top: 15px;
   padding-bottom: 10px;
-  width: 40%;
+  max-width: 40%;
 }
 
 footer {
@@ -138,11 +143,20 @@ footer {
 footer .logo-footer {
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  max-width: 30%;
   filter: invert(100%);
 }
-footer .fa-utensils, footer .fa-handshake-angle {
+footer .fa-utensils,
+footer .fa-handshake-angle {
   margin-right: 10px;
+}
+@media all and (min-width: 1024px) {
+  footer {
+    padding-left: 190px;
+  }
+  footer .logo-footer {
+    max-width: 8%;
+  }
 }
 
 .loader {
@@ -199,20 +213,34 @@ footer .fa-utensils, footer .fa-handshake-angle {
   box-shadow: inset 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-h3, h4 {
+h3,
+h4 {
   margin-left: 10px;
 }
 
 .restaurants {
   margin-left: 25px;
 }
+@media all and (min-width: 1024px) {
+  .restaurants {
+    margin-left: 90px;
+  }
+}
 
-.homepage-title, .homepage-welcome {
+@media all and (min-width: 1024px) {
+  .title-tutoriel {
+    margin-left: 80px;
+  }
+}
+
+.homepage-title,
+.homepage-welcome {
   justify-content: center;
   text-align: center;
   margin-top: 5px;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom: 25px;
 }
 
 .accueil-site {
@@ -222,18 +250,35 @@ h3, h4 {
 
 .intro-size {
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 1px;
 }
 
 .section-restaurant {
-  height: auto;
+  height: 1160px;
   width: auto;
   padding-top: 30px;
 }
 @media all and (min-width: 1024px) {
+  .section-restaurant {
+    height: auto;
+  }
+}
+
+@media all and (min-width: 1024px) {
   .section-restaurant-flex {
     display: flex;
     flex-direction: row;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .tuto-step-flex {
+    display: flex;
+    flex-direction: row;
+    margin-left: 55px;
+    margin-right: 55px;
   }
 }
 
@@ -256,14 +301,20 @@ h3, h4 {
 .tuto-description:hover {
   background-color: #F5EDFF;
 }
-.tuto-description:hover .fa-mobile-screen-button, .tuto-description:hover .fa-list, .tuto-description:hover .fa-store {
+.tuto-description:hover .fa-mobile-screen-button,
+.tuto-description:hover .fa-list,
+.tuto-description:hover .fa-store {
   color: #9356DC;
 }
-.tuto-description:hover .fa-mobile-screen-button:hover, .tuto-description:hover .fa-list:hover, .tuto-description:hover .fa-store:hover {
+.tuto-description:hover .fa-mobile-screen-button:hover,
+.tuto-description:hover .fa-list:hover,
+.tuto-description:hover .fa-store:hover {
   color: #9356DC;
 }
 
-.fa-mobile-screen-button, .fa-list, .fa-store {
+.fa-mobile-screen-button,
+.fa-list,
+.fa-store {
   color: #7E7E7E;
   margin-right: 15px;
   margin-left: 10px;
@@ -279,7 +330,9 @@ h3, h4 {
   }
 }
 
-.fa-1, .fa-2, .fa-3 {
+.fa-1,
+.fa-2,
+.fa-3 {
   color: white;
   width: 20px;
   height: 20px;
@@ -289,7 +342,9 @@ h3, h4 {
   background-color: #9356DC;
   z-index: 1;
 }
-.fa-1::before, .fa-2::before, .fa-3::before {
+.fa-1::before,
+.fa-2::before,
+.fa-3::before {
   display: flex;
   justify-content: center;
   padding-top: 5px;
@@ -431,11 +486,21 @@ a:visited {
   height: 200px;
   width: 100%;
 }
+@media all and (min-width: 1024px) {
+  .image-restaurant-top {
+    height: 400px;
+  }
+}
 
 .title-restaurant {
   font-size: 26px;
   margin-top: 15px;
   margin-bottom: 10px;
+}
+@media all and (min-width: 1024px) {
+  .title-restaurant {
+    margin-left: 80px;
+  }
 }
 
 .restaurant-name-menu {
@@ -468,15 +533,26 @@ a:visited {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
+@media all and (min-width: 1024px) {
+  .like-menu:hover .heart-bg {
+    right: 55px;
+    top: 35px;
+  }
+}
 .like-menu:hover .heart-no-bg {
   opacity: 0;
+}
+@media all and (min-width: 1024px) {
+  .like-menu {
+    font-size: 28px;
+    margin-right: 70px;
+  }
 }
 
 .menu-list-333 {
   height: 970px;
   border-radius: 30px 30px 0 0;
   margin-top: -30px;
-  width: 100%;
 }
 .menu-list-333__menu-card--1 {
   animation: fade-in 1s linear both;
@@ -513,6 +589,11 @@ a:visited {
 .menu-list-333__menu-card--9 {
   animation: fade-in 1s linear both;
   animation-delay: 900ms;
+}
+@media all and (min-width: 1024px) {
+  .menu-list-333 {
+    height: 450px;
+  }
 }
 
 .menu-list-433 {
@@ -572,6 +653,22 @@ a:visited {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   font-weight: 400;
+}
+@media all and (min-width: 1024px) {
+  .submenu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 6px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .bg-grey-simple {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
 
 .submenu-plate {

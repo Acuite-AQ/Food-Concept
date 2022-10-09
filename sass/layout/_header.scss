@@ -5,6 +5,10 @@
         align-items: center;
         font-size: 18px;
         margin-left: 20px;
+        @media all and (min-width: 1024px) {
+        margin-left: 70px;
+        font-size: 28px;
+        }
     }
 }
 
@@ -13,7 +17,7 @@
     @include margin-side;
     padding-top: 15px;
     padding-bottom: 10px;
-    width: 40%;
+    max-width: 40%;
 }
 
 

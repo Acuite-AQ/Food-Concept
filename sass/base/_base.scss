@@ -14,7 +14,6 @@ p {
 .bg-grey {
     background-color: $color-gris-intro;
     @include margin-fond-colore;
-    height: 105%;
 }
 
 .bg-grey-simple {

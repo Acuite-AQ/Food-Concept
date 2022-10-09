@@ -3,14 +3,25 @@ footer {
     background-color: $color-grey-dark;
     padding-left: 25px;
     padding-top: 30px;
-    color:$color-white;
+    color: $color-white;
     padding-bottom: 30px;
+
     .logo-footer {
         @include margin-side;
-        width: 30%;
+        max-width: 30%;
         filter: invert(100%);
     }
-    .fa-utensils, .fa-handshake-angle {
+
+    .fa-utensils,
+    .fa-handshake-angle {
         margin-right: 10px;
+    }
+
+    @media all and (min-width: 1024px) {
+        padding-left: 190px;
+
+        .logo-footer {
+            max-width: 8%;
+        }
     }
 }
