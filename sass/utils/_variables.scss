@@ -1,0 +1,50 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-gris-intro:#F6F6F6;
+$color-grey-dark:#353535;
+$color-white:#ffffff;
+
+$color-gradient:linear-gradient(#FF79DA,#9356DC);
+$primary-font:Shrikhand;
+$secondary-font:Roboto;
+
+// $lighten-grandient:lighten($color-gradient, 10%);
+$num-plates-333:9;
+$num-plates-433:10;
+$anim-delay:100ms;
+
+$width-full:100%;
+$length-full:100%;
+
+@mixin margin-side {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin margin-base-left {
+    margin-left: 10px;
+}
+
+@mixin margin-fond-colore {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

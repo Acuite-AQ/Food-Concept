@@ -1,0 +1,301 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        height: 16px;
+        width: 16px;
+        border-radius: 16px;
+        animation: jump 1s;
+        animation-iteration-count: 1;
+
+        &Container {
+            display: flex;
+            width: 80px;
+            justify-content: space-between;
+        }
+
+        &--1 {
+            background-color: $color-primary;
+        }
+
+        &--2 {
+            background-color: $color-secondary;
+            animation-delay: 0.25s;
+        }
+
+        &--3 {
+            background-color: $color-tertiary;
+            animation-delay: 0.5s;
+        }
+    }
+}
+
+.fa-location-dot {
+    margin-right: 15px;
+}
+
+.location-paris {
+    background-color: #EAEAEA;
+    @include margin-fond-colore;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    box-shadow: inset 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+h3, h4 {
+    @include margin-base-left;
+}
+
+.restaurants {
+    margin-left: 25px;
+}
+
+.homepage-title, .homepage-welcome {
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.accueil-site {
+    padding-top: 20px;
+    font-weight: 800;
+}
+
+.intro-size {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.section-restaurant {
+    height: auto;
+    width: auto;
+    padding-top: 30px;
+    @media all and (min-width: 1024px) {
+        // display: flex;
+    }
+}
+
+.section-restaurant-flex {
+    @media all and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.button {
+    text-align: center;
+}
+
+.tuto-description {
+    width: $width-full;
+    margin-left: -10px;
+    padding-left: 20px;
+    align-items: center;
+    border: 2px inset transparent;
+    box-shadow: 1px 1px 1px 1px #F2F2F2;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $color-gris-intro;
+
+    &:hover {
+        background-color: #F5EDFF;
+
+        .fa-mobile-screen-button, .fa-list,.fa-store {
+            color: $color-primary;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.fa-mobile-screen-button, .fa-list, .fa-store {
+    color: #7E7E7E;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.tuto-step {
+    display: flex;
+    align-items: center;
+    @media all and (min-width: 1024px) {
+        flex:1;
+    }
+}
+
+// .tuto-step1, .tuto-step2, .tuto-step3 {
+//     display: flex;
+//     align-items: center;
+// }
+
+.fa-1, .fa-2, .fa-3 {
+    color: white;
+    width: 20px;
+    height: 20px;
+    border: 0px inset $color-primary;
+    border-radius: 25px;
+    font-size: 10px;
+    background-color: $color-primary;
+    z-index: 1;
+
+    &::before {
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+        font-size: 10px;
+    }
+}
+
+.img-restaurant {
+    object-fit: cover;
+    height: 70%;
+    width: $width-full;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.figcaption {
+    height: 30%;
+    width: $width-full;
+}
+
+.figure {
+    width: $width-full;
+    height: 100%;
+    margin: 0px;
+}
+
+.figure.tag {
+    position: relative;
+
+    &::before {
+        content: "Nouveau";
+        background-color: $color-tertiary;
+        position: absolute;
+        top: 4%;
+        right: 2%;
+        display: block;
+        color: green;
+        width: 65px;
+        height: 16px;
+        text-align: center;
+        padding-top: 2px;
+        font-size: 12px;
+        border-radius: 4%;
+        font-weight: bold;
+    }
+}
+
+.bg-white {
+    background-color: white;
+    height: 250px;
+    width: 90%;
+    border-radius: 20px
+}
+
+.restaurant-card {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.restaurant-caption {
+    @include margin-base-left;
+    font-weight: 800;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+
+.restaurant-name {
+    margin: 0;
+}
+
+.fa-heart {
+    margin-right: 15px;
+    padding-top: 5px;
+    transition: color 1s;
+}
+
+.heart-no-bg {
+    opacity: 100;
+}
+
+.heart-bg {
+    visibility: hidden;
+
+    &:hover,
+    &:focus,
+    &:active {
+        visibility: visible;
+        background: $color-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.like {
+    border: none;
+    background: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    width: 18px;
+    height: 23px;
+
+    &:hover {
+        .heart-bg {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            visibility: visible;
+            opacity: 100;
+            background: $color-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
+
+        .heart-no-bg {
+            opacity: 0;
+        }
+    }
+}
+
+.restaurant-location {
+    @include margin-base-left;
+}

@@ -1,0 +1,30 @@
+.button-explore {
+    border: 0px inset transparent;
+    background: $color-gradient;
+    width: 200px;
+    height: 45px;
+    @include margin-side;
+    color: white;
+    border-radius: 25px;
+
+    &:hover {
+        background-color: rgb(24, 27, 29);
+        box-shadow: rgb(0 0 0 / 50%) 0.25rem 0.25rem 10px;
+    }
+}
+
+.button-command {
+    margin-top: 20px;
+    border: 0px inset transparent;
+    background: $color-gradient;
+    width: 200px;
+    height: 45px;
+    @include margin-side;
+    color: white;
+    border-radius: 25px;
+
+    &:hover {
+        background-color: rgb(24, 27, 29);
+        box-shadow: rgb(0 0 0 / 50%) 0.25rem 0.25rem 10px;
+    }
+}

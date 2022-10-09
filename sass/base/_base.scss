@@ -1,0 +1,61 @@
+* {
+    font-family: $secondary-font;
+}
+
+body {
+    margin: 0px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+.bg-grey {
+    background-color: $color-gris-intro;
+    @include margin-fond-colore;
+    height: 105%;
+}
+
+.bg-grey-simple {
+    background-color: $color-gris-intro;
+    position: sticky;
+}
+
+
+.flex-ligne-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.flex-colonne-between {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.flex-colonne {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.title-font {
+    font-family: $primary-font;
+    font-weight: 500;
+}
+
+.mail {
+    color: white;
+}
+
+.button {
+    margin-bottom: 30px;
+}
+
+p {
+    justify-content: left;
+}
