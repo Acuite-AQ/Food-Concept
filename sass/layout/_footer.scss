@@ -1,7 +1,7 @@
 footer {
     @include margin-fond-colore;
     background-color: $color-grey-dark;
-    padding-left: 25px;
+    padding-left: 30px;
     padding-top: 30px;
     color: $color-white;
     padding-bottom: 30px;
@@ -15,6 +15,7 @@ footer {
     .fa-utensils,
     .fa-handshake-angle {
         margin-right: 10px;
+        font-size: 14px;
     }
 
     @media all and (min-width: 1024px) {

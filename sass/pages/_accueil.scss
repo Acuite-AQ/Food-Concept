@@ -59,7 +59,9 @@
 .intro {
     padding-top: 10px;
     padding-bottom: 1px;
-
+    &__homepage-title {
+        padding-top: 30px;
+    }
     &__homepage-title,
     &__homepage-welcome {
         justify-content: center;
@@ -72,6 +74,9 @@
 }
 
 .tuto {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 60px;
     &__title {
         @media all and (min-width: 1024px) {
             margin-left: 80px;
@@ -128,7 +133,7 @@
 .restaurants {
     height: 1160px;
     width: auto;
-    padding-top: 30px;
+    padding:30px 10px 30px 10px;
 
     @media all and (min-width: 1024px) {
         height: auto;
