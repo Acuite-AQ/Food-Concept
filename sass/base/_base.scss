@@ -11,6 +11,21 @@ p {
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+h3,
+h4 {
+    @include margin-base-left;
+}
+
 .bg-grey {
     background-color: $color-gris-intro;
     @include margin-fond-colore;
@@ -53,6 +68,8 @@ p {
 
 .button {
     margin-bottom: 30px;
+    text-align: center;
+
 }
 
 p {

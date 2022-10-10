@@ -29,13 +29,13 @@
     <img class="logo-header" src="../images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" />
   </header>
 
-  <p class="location-paris">
-    <i class="logo-gps fa-solid fa-location-dot"> </i> Paris, Belleville
+  <p class="location">
+    <i class="location__logo-gps fa-solid fa-location-dot"> </i> Paris, Belleville
   </p>
 
-  <div class="bg-grey intro-size">
-    <h2 class="homepage-title">Réservez le menu qui vous convient</h2>
-    <p class="homepage-welcome">
+  <div class="bg-grey intro">
+    <h2 class="intro__homepage-title">Réservez le menu qui vous convient</h2>
+    <p class="intro__homepage-welcome">
       Découvrez des restaurants d'exception, sélectionnés par nos soins.
     </p>
 
@@ -46,42 +46,44 @@
     </div>
   </div>
 
-  <h3 class="title-tutoriel"> Fonctionnement</h3>
-  <div class="tuto-step-flex">
-    <h4 class="tuto-step">
-      <i class="fa-solid fa-1"></i>
-      <div class="tuto-description">
-        <i class="fa-solid fa-mobile-screen-button"> </i>
-        Choisissez un restaurant
-      </div>
-    </h4>
-    <h4 class="tuto-step">
-      <i class="fa-solid fa-2"></i>
-      <div class="tuto-description">
-        <i class="fa-solid fa-list"> </i> Composez votre menu
-      </div>
-    </h4>
-    <h4 class="tuto-step">
-      <i class="fa-solid fa-3"> </i>
-      <div class="tuto-description">
-        <i class="fa-solid fa-store"></i> Dégustez au restaurant
-      </div>
-    </h4>
+  <div class="tuto">
+    <h3 class="tuto__title"> Fonctionnement</h3>
+    <div class="tuto__steps">
+      <h4 class="tuto__step">
+        <i class="fa-solid fa-1"></i>
+        <div class="tuto__description">
+          <i class="fa-solid fa-mobile-screen-button"> </i>
+          Choisissez un restaurant
+        </div>
+      </h4>
+      <h4 class="tuto__step">
+        <i class="fa-solid fa-2"></i>
+        <div class="tuto__description">
+          <i class="fa-solid fa-list"> </i> Composez votre menu
+        </div>
+      </h4>
+      <h4 class="tuto__step">
+        <i class="fa-solid fa-3"> </i>
+        <div class="tuto__description">
+          <i class="fa-solid fa-store"></i> Dégustez au restaurant
+        </div>
+      </h4>
+    </div>
   </div>
 
-  <section class="bg-grey section-restaurant">
-    <h3 class="restaurants"> Restaurants</h3>
-    <div class="section-restaurant-flex">
-      <div class="bg-white restaurant-card flex-colonne-between">
-        <figure class="figure tag tag-new">
+  <section class="bg-grey restaurants">
+    <h3 class="restaurants__title"> Restaurants</h3>
+    <div class="restaurants__flex">
+      <div class="bg-white restaurants__card flex-colonne-between">
+        <figure class="restaurants__figure restaurants__tag tag-new">
           <a href="./la-palette-du-gout.html">
-            <img class="img-restaurant" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            <img class="restaurants__img" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
               alt="Restaurant La palette du goût" />
-            <figcaption class="figcaption">
-              <div class="restaurant-caption">
-                <p class="restaurant-name"> La palette du goût </p>
+            <figcaption class="restaurants__caption">
+              <div class="restaurants__captions">
+                <p class="restaurants__name"> La palette du goût </p>
               </div>
-              <div class="restaurant-location">Ménilmontant</div>
+              <div class="restaurants__location">Ménilmontant</div>
               <button class="like">
                 <i class="fa-regular fa-heart heart-no-bg"> </i>
                 <i class="fa-solid fa-heart heart-bg"></i>
@@ -92,16 +94,16 @@
       </div>
 
 
-      <div class="bg-white restaurant-card flex-colonne-between">
-        <figure class="figure tag tag-new">
+      <div class="bg-white restaurants__card flex-colonne-between">
+        <figure class="restaurants__figure restaurants__tag tag-new">
           <a href="./la-note-enchantee.html">
-            <img class="img-restaurant" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            <img class="restaurants__img" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
               alt="Restaurant La note enchantée" />
-            <figcaption class="figcaption">
-              <div class="restaurant-caption">
-                <p class="restaurant-name"> La note enchantée</p>
+            <figcaption class="restaurants__caption">
+              <div class="restaurants__captions">
+                <p class="restaurants__name"> La note enchantée</p>
               </div>
-              <div class="restaurant-location">Charonne</div>
+              <div class="restaurants__location">Charonne</div>
               <button class="like">
                 <i class="fa-regular fa-heart heart-no-bg"> </i>
                 <i class="fa-solid fa-heart heart-bg"></i>
@@ -111,16 +113,16 @@
         </figure>
       </div>
 
-      <div class="bg-white restaurant-card flex-colonne-between">
-        <figure class="figure tag tag-new">
+      <div class="bg-white restaurants__card flex-colonne-between">
+        <figure class="restaurants__figure restaurants__tag tag-new">
           <a href="./a-la-francaise.html">
-            <img class="img-restaurant" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            <img class="restaurants__img" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
               alt="Restaurant A la française" />
-            <figcaption class="figcaption">
-              <div class="restaurant-caption">
-                <p class="restaurant-name"> A la française </p>
+            <figcaption class="restaurants__caption">
+              <div class="restaurants__captions">
+                <p class="restaurants__name"> A la française </p>
               </div>
-              <div class="restaurant-location">Cité Rouge</div>
+              <div class="restaurants__location">Cité Rouge</div>
               <button class="like">
                 <i class="fa-regular fa-heart heart-no-bg"> </i>
                 <i class="fa-solid fa-heart heart-bg"></i>
@@ -130,16 +132,16 @@
         </figure>
       </div>
 
-      <div class="bg-white restaurant-card flex-colonne-between">
-        <figure class="figure tag tag-new">
+      <div class="bg-white restaurants__card flex-colonne-between">
+        <figure class="restaurants__figure restaurants__tag tag-new">
           <a href="./le-delice-des-sens.html">
-            <img class="img-restaurant" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            <img class="restaurants__img" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
               alt="Restaurant Le délice des sens" />
-            <figcaption class="figcaption">
-              <div class="restaurant-caption">
-                <p class="restaurant-name"> Le délice des sens </p>
+            <figcaption class="restaurants__caption">
+              <div class="restaurants__captions">
+                <p class="restaurants__name"> Le délice des sens </p>
               </div>
-              <div class="restaurant-location">Folie-Méricourt</div>
+              <div class="restaurants__location">Folie-Méricourt</div>
               <button class="like">
                 <i class="fa-regular fa-heart heart-no-bg"> </i>
                 <i class="fa-solid fa-heart heart-bg"></i>
@@ -150,14 +152,15 @@
       </div>
     </div>
   </section>
-</body>
 
-<footer>
-  <img class="logo-footer" src="../images/logo/ohmyfood.png" />
-  <p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
-  <p><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
-  <p>Mentions légales</p>
-  <a class="mail" href="mailto:ohmyfood.com">Contact</a>
-</footer>
+
+  <footer>
+    <img class="logo-footer" src="../images/logo/ohmyfood.png" alt="Logo ohmyfood" />
+    <p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+    <p><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
+    <p>Mentions légales</p>
+    <a class="mail" href="mailto:valakar@yopmail.com">Contact</a>
+  </footer>
+</body>
 
 </html>

@@ -42,11 +42,7 @@
     }
 }
 
-.fa-location-dot {
-    margin-right: 15px;
-}
-
-.location-paris {
+.location {
     background-color: #EAEAEA;
     @include margin-fond-colore;
     justify-content: center;
@@ -55,46 +51,81 @@
     margin-bottom: 0px;
     box-shadow: inset 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
 
-}
-
-h3,
-h4 {
-    @include margin-base-left;
-}
-
-.restaurants {
-    margin-left: 25px;
-    @media all and (min-width: 1024px) {
-        margin-left: 90px;
+    &__logo-gps {
+        margin-right: 15px;
     }
 }
 
-.title-tutoriel {
-    @media all and (min-width: 1024px) {
-        margin-left: 80px;
-    }
-}
-.homepage-title,
-.homepage-welcome {
-    justify-content: center;
-    text-align: center;
-    margin-top: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-bottom: 25px;
-}
-
-.accueil-site {
-    padding-top: 20px;
-    font-weight: 800;
-}
-
-.intro-size {
+.intro {
     padding-top: 10px;
     padding-bottom: 1px;
+
+    &__homepage-title,
+    &__homepage-welcome {
+        justify-content: center;
+        text-align: center;
+        margin-top: 5px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 25px;
+    }
 }
 
-.section-restaurant {
+.tuto {
+    &__title {
+        @media all and (min-width: 1024px) {
+            margin-left: 80px;
+        }
+    }
+
+    &__steps {
+        @media all and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+
+        @media all and (min-width: 1024px) {
+            flex: 1;
+        }
+    }
+
+    &__description {
+        width: $width-full;
+        margin-left: -10px;
+        padding-left: 20px;
+        align-items: center;
+        border: 2px inset transparent;
+        box-shadow: 1px 1px 1px 1px #F2F2F2;
+        border-radius: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: $color-gris-intro;
+
+        &:hover {
+            background-color: #F5EDFF;
+
+            .fa-mobile-screen-button,
+            .fa-list,
+            .fa-store {
+                color: $color-primary;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+
+.restaurants {
     height: 1160px;
     width: auto;
     padding-top: 30px;
@@ -102,197 +133,84 @@ h4 {
     @media all and (min-width: 1024px) {
         height: auto;
     }
-}
 
-.section-restaurant-flex {
-    @media all and (min-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        margin-left: 75px;
-        margin-right: 75px;
-    }
-}
+    &__title {
+        margin-left: 25px;
 
-.tuto-step-flex {
-    @media all and (min-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        margin-left: 55px;
-        margin-right: 55px;
-    }
-}
-
-.button {
-    text-align: center;
-}
-
-.tuto-description {
-    width: $width-full;
-    margin-left: -10px;
-    padding-left: 20px;
-    align-items: center;
-    border: 2px inset transparent;
-    box-shadow: 1px 1px 1px 1px #F2F2F2;
-    border-radius: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: $color-gris-intro;
-
-    &:hover {
-        background-color: #F5EDFF;
-
-        .fa-mobile-screen-button,
-        .fa-list,
-        .fa-store {
-            color: $color-primary;
-
-            &:hover {
-                color: $color-primary;
-            }
+        @media all and (min-width: 1024px) {
+            margin-left: 90px;
         }
     }
-}
 
-.fa-mobile-screen-button,
-.fa-list,
-.fa-store {
-    color: #7E7E7E;
-    margin-right: 15px;
-    margin-left: 10px;
-}
-
-.tuto-step {
-    display: flex;
-    align-items: center;
-
-    @media all and (min-width: 1024px) {
-        flex: 1;
+    &__flex {
+        @media all and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            margin-left: 75px;
+            margin-right: 75px;
+        }
     }
-}
 
-// .tuto-step1, .tuto-step2, .tuto-step3 {
-//     display: flex;
-//     align-items: center;
-// }
-
-.fa-1,
-.fa-2,
-.fa-3 {
-    color: white;
-    width: 20px;
-    height: 20px;
-    border: 0px inset $color-primary;
-    border-radius: 25px;
-    font-size: 10px;
-    background-color: $color-primary;
-    z-index: 1;
-
-    &::before {
-        display: flex;
-        justify-content: center;
-        padding-top: 5px;
-        font-size: 10px;
+    &__card {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
-}
 
-.img-restaurant {
-    object-fit: cover;
-    height: 70%;
-    width: $width-full;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.figcaption {
-    height: 30%;
-    width: $width-full;
-}
-
-.figure {
-    width: $width-full;
-    height: 100%;
-    margin: 0px;
-}
-
-.figure.tag {
-    position: relative;
-
-    &::before {
-        content: "Nouveau";
-        background-color: $color-tertiary;
-        position: absolute;
-        top: 4%;
-        right: 2%;
-        display: block;
-        color: green;
-        width: 65px;
-        height: 16px;
-        text-align: center;
-        padding-top: 2px;
-        font-size: 12px;
-        border-radius: 4%;
-        font-weight: bold;
+    &__figure {
+        width: $width-full;
+        height: 100%;
+        margin: 0px;
     }
-}
 
-.bg-white {
-    background-color: white;
-    height: 250px;
-    width: 90%;
-    border-radius: 20px
-}
+    &__tag {
+        position: relative;
 
-.restaurant-card {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
+        &::before {
+            content: "Nouveau";
+            background-color: $color-tertiary;
+            position: absolute;
+            top: 4%;
+            right: 2%;
+            display: block;
+            color: green;
+            width: 65px;
+            height: 16px;
+            text-align: center;
+            padding-top: 2px;
+            font-size: 12px;
+            border-radius: 4%;
+            font-weight: bold;
+        }
+    }
 
-a {
-    text-decoration: none;
-    color: black;
+    &__img {
+        object-fit: cover;
+        height: 70%;
+        width: $width-full;
+        border-radius: 10px 10px 0px 0px;
+    }
 
-    &:visited {
+    // &__caption {
+    //         height: 30%;
+    //         width: $width-full;
+    // }
+    &__captions {
+        @include margin-base-left;
+        font-weight: 800;
+        padding-top: 13px;
+        padding-bottom: 5px;
         text-decoration: none;
+        border: none;
         color: black;
     }
-}
 
-.restaurant-caption {
-    @include margin-base-left;
-    font-weight: 800;
-    padding-top: 13px;
-    padding-bottom: 5px;
-    text-decoration: none;
-    border: none;
-    color: black;
-}
+    &__name {
+        margin: 0;
+    }
 
-.restaurant-name {
-    margin: 0;
-}
-
-.fa-heart {
-    margin-right: 15px;
-    padding-top: 5px;
-    transition: color 1s;
-}
-
-.heart-no-bg {
-    opacity: 100;
-}
-
-.heart-bg {
-    visibility: hidden;
-
-    &:hover,
-    &:focus,
-    &:active {
-        visibility: visible;
-        background: $color-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        cursor: pointer;
+    &__location {
+        @include margin-base-left;
     }
 }
 
@@ -305,6 +223,12 @@ a {
     bottom: 25px;
     width: 18px;
     height: 23px;
+
+    .fa-heart {
+        margin-right: 15px;
+        padding-top: 5px;
+        transition: color 1s;
+    }
 
     &:hover {
         .heart-bg {
@@ -326,6 +250,198 @@ a {
     }
 }
 
-.restaurant-location {
-    @include margin-base-left;
+
+
+
+
+.heart-no-bg {
+    opacity: 100;
 }
+
+.heart-bg {
+    visibility: hidden;
+
+    &:hover,
+    &:focus,
+    &:active {
+        visibility: visible;
+        background: $color-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+
+
+.fa-mobile-screen-button,
+.fa-list,
+.fa-store {
+    color: #7E7E7E;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.fa-1,
+.fa-2,
+.fa-3 {
+    color: white;
+    width: 20px;
+    height: 20px;
+    border: 0px inset $color-primary;
+    border-radius: 25px;
+    font-size: 10px;
+    background-color: $color-primary;
+    z-index: 1;
+
+    &::before {
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+        font-size: 10px;
+    }
+}
+
+.bg-white {
+    background-color: white;
+    height: 250px;
+    width: 90%;
+    border-radius: 20px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .accueil-site {
+//     padding-top: 20px;
+//     font-weight: 800;
+// }
+
+// .fa-heart {
+//     margin-right: 15px;
+//     padding-top: 5px;
+//     transition: color 1s;
+// }
+
+// .restaurant-name {
+//     margin: 0;
+// }
+
+// .section-restaurant {
+//     height: 1160px;
+//     width: auto;
+//     padding-top: 30px;
+
+//     @media all and (min-width: 1024px) {
+//         height: auto;
+//     }
+// }
+
+// .section-restaurant-flex {
+//     @media all and (min-width: 1024px) {
+//         display: flex;
+//         flex-direction: row;
+//         margin-left: 75px;
+//         margin-right: 75px;
+//     }
+// }
+
+
+// .tuto-step1, .tuto-step2, .tuto-step3 {
+//     display: flex;
+//     align-items: center;
+// }
+
+
+// .img-restaurant {
+//     object-fit: cover;
+//     height: 70%;
+//     width: $width-full;
+//     border-radius: 10px 10px 0px 0px;
+// }
+
+// .figcaption {
+//     height: 30%;
+//     width: $width-full;
+// }
+
+// .figure {
+//     width: $width-full;
+//     height: 100%;
+//     margin: 0px;
+// }
+
+// .figure.tag {
+//     position: relative;
+//     &::before {
+//         content: "Nouveau";
+//         background-color: $color-tertiary;
+//         position: absolute;
+//         top: 4%;
+//         right: 2%;
+//         display: block;
+//         color: green;
+//         width: 65px;
+//         height: 16px;
+//         text-align: center;
+//         padding-top: 2px;
+//         font-size: 12px;
+//         border-radius: 4%;
+//         font-weight: bold;
+//     }
+// }
+
+
+
+// .restaurant-card {
+//     margin-left: 20px;
+//     margin-right: 20px;
+//     margin-bottom: 20px;
+// }
+
+
+// .restaurant-caption {
+//     @include margin-base-left;
+//     font-weight: 800;
+//     padding-top: 13px;
+//     padding-bottom: 5px;
+//     text-decoration: none;
+//     border: none;
+//     color: black;
+// }
+
+
+
+// .restaurant-location {
+//     @include margin-base-left;
+// }
