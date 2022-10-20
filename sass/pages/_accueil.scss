@@ -99,6 +99,8 @@
         border-radius: $radius;
         display: $flex;
         align-items: $center;
+        font-weight: bold;
+        margin: 21px 0 21px 10px;
 
         @media all and (min-width: $media-desktop) {
             flex: $one;
