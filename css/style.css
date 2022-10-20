@@ -456,8 +456,18 @@ footer .fa-handshake-angle {
 .bg-white {
   background-color: #ffffff;
   height: 250px;
-  width: 90%;
+  width: 92%;
   border-radius: 25px;
+}
+@media all and (min-width: 700px) {
+  .bg-white {
+    width: auto;
+  }
+}
+@media all and (min-width: 1024px) {
+  .bg-white {
+    width: 92%;
+  }
 }
 
 .img-restaurant__top {
@@ -645,16 +655,40 @@ footer .fa-handshake-angle {
 .submenus__name {
   padding: 10px 0 0 10px;
   font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 75%;
+}
+.submenus__subname {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .submenus__details {
   padding: 5px 0 0 10px;
   font-size: 12px;
   font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
 }
 .submenus__price {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
   float: right;
   padding: 0 10px 10px 0;
   font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: visible;
+  padding-bottom: 0px;
+  padding-top: 5px;
 }
 
 .bg-white-menu {
@@ -667,6 +701,9 @@ footer .fa-handshake-angle {
 }
 .bg-white-menu__description {
   width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .bg-white-menu .checkmark {
   display: flex;

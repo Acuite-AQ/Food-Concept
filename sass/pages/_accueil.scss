@@ -291,6 +291,12 @@
 .bg-white {
     background-color: $color-white;
     height: 250px;
-    width: 90%;
+    width: 92%;
     border-radius:$radius;
+    @media all and (min-width: $media-tablette) {
+        width:auto;
+    }
+    @media all and (min-width: $media-desktop) {
+        width:92%;
+    }
 }
