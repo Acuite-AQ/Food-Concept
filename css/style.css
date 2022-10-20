@@ -16,12 +16,32 @@
 }
 @keyframes slide-in-right {
   0% {
-    transform: translateX(100px);
+    transform: translateX(10px);
     opacity: 1;
   }
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 * {
@@ -34,16 +54,16 @@ body {
 
 p {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 a:visited {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 h3,
@@ -55,31 +75,12 @@ h4 {
   background-color: #F6F6F6;
   margin-left: -10px;
   margin-right: -10px;
+  height: 275px;
 }
 
 .bg-grey-simple {
   background-color: #F6F6F6;
   position: sticky;
-}
-
-.flex-ligne-between {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-
-.flex-colonne-between {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-
-.flex-colonne {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .title-font {
@@ -88,47 +89,50 @@ h4 {
 }
 
 .mail {
-  color: white;
+  color: #ffffff;
 }
 
 .button {
-  margin-bottom: 30px;
   text-align: center;
 }
 
-p {
-  justify-content: left;
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
 }
 
-.button-explore {
-  border: 0px inset transparent;
-  background: linear-gradient(#FF79DA, #9356DC);
+.button__explore {
   width: 200px;
-  height: 45px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0px inset transparent;
   border-radius: 25px;
+  color: #ffffff;
+  font-size: 14px;
+  height: 45px;
 }
-.button-explore:hover {
-  background-color: rgb(24, 27, 29);
-  box-shadow: rgba(0, 0, 0, 0.5) 0.25rem 0.25rem 10px;
+.button__explore:hover {
+  text-shadow: 0px 0px 4px rgb(0, 0, 0);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 
-.button-command {
+.button__command {
   margin-top: 20px;
-  border: 0px inset transparent;
-  background: linear-gradient(#FF79DA, #9356DC);
-  width: 200px;
-  height: 45px;
+  width: 165px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0px inset transparent;
   border-radius: 25px;
+  color: #ffffff;
+  font-size: 14px;
+  height: 45px;
 }
-.button-command:hover {
-  background-color: rgb(24, 27, 29);
-  box-shadow: rgba(0, 0, 0, 0.5) 0.25rem 0.25rem 10px;
+.button__command:hover {
+  text-shadow: 0px 0px 4px rgb(0, 0, 0);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 
 .section-header {
@@ -151,8 +155,8 @@ p {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 5px;
   max-width: 40%;
 }
 
@@ -160,10 +164,8 @@ footer {
   margin-left: -10px;
   margin-right: -10px;
   background-color: #353535;
-  padding-left: 30px;
-  padding-top: 30px;
   color: #ffffff;
-  padding-bottom: 30px;
+  padding: 30px 0px 30px 30px;
 }
 footer .logo-footer {
   margin-left: auto;
@@ -191,11 +193,12 @@ footer .fa-handshake-angle {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  animation: loader 0.01s;
-  animation-delay: 1.75s;
+  background-color: #ffffff;
+  animation: loader 1s;
+  animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 10000;
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,15 +216,15 @@ footer .fa-handshake-angle {
   justify-content: space-between;
 }
 .loader__item--1 {
-  background-color: #9356DC;
+  background-color: #99E2D0;
 }
 .loader__item--2 {
-  background-color: #FF79DA;
-  animation-delay: 0.25s;
+  background-color: #9356DC;
+  animation-delay: 0.5s;
 }
 .loader__item--3 {
-  background-color: #99E2D0;
-  animation-delay: 0.5s;
+  background-color: #FF79DA;
+  animation-delay: 1s;
 }
 
 .location {
@@ -229,81 +232,76 @@ footer .fa-handshake-angle {
   margin-left: -10px;
   margin-right: -10px;
   justify-content: center;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-  box-shadow: inset 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px 0 10px;
+  margin: 8px 0 0;
+  box-shadow: inset 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .location__logo-gps {
   margin-right: 15px;
 }
 
 .intro {
-  padding-top: 10px;
-  padding-bottom: 1px;
+  padding: 10px 0 0;
 }
 .intro__homepage-title {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .intro__homepage-title, .intro__homepage-welcome {
   justify-content: center;
   text-align: center;
-  margin-top: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-bottom: 25px;
+  margin: 5px 0 25px;
+  padding: 20px 30px 0 30px;
 }
 
-.tuto {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 60px;
+.tutorial {
+  margin: 0 10px 60px 10px;
+}
+.tutorial__title {
+  padding-top: 25px;
 }
 @media all and (min-width: 1024px) {
-  .tuto__title {
+  .tutorial__title {
     margin-left: 80px;
   }
 }
 @media all and (min-width: 1024px) {
-  .tuto__steps {
+  .tutorial__steps {
     display: flex;
     flex-direction: row;
-    margin-left: 55px;
-    margin-right: 55px;
+    margin: 0 55px 0 55px;
   }
 }
-.tuto__step {
+.tutorial__step {
+  border-radius: 25px;
   display: flex;
   align-items: center;
 }
 @media all and (min-width: 1024px) {
-  .tuto__step {
+  .tutorial__step {
     flex: 1;
   }
 }
-.tuto__description {
+.tutorial__description {
   width: 100%;
   margin-left: -10px;
-  padding-left: 20px;
   align-items: center;
   border: 2px inset transparent;
-  box-shadow: 1px 1px 1px 1px #F2F2F2;
-  border-radius: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13);
+  border-radius: 25px;
+  padding: 20px 0 20px 20px;
   background-color: #F6F6F6;
 }
-.tuto__description:hover {
+.tutorial__description:hover {
   background-color: #F5EDFF;
 }
-.tuto__description:hover .fa-mobile-screen-button,
-.tuto__description:hover .fa-list,
-.tuto__description:hover .fa-store {
+.tutorial__description:hover .fa-mobile-screen-button,
+.tutorial__description:hover .fa-list,
+.tutorial__description:hover .fa-store {
   color: #9356DC;
 }
-.tuto__description:hover .fa-mobile-screen-button:hover,
-.tuto__description:hover .fa-list:hover,
-.tuto__description:hover .fa-store:hover {
+.tutorial__description:hover .fa-mobile-screen-button:hover,
+.tutorial__description:hover .fa-list:hover,
+.tutorial__description:hover .fa-store:hover {
   color: #9356DC;
 }
 
@@ -329,14 +327,11 @@ footer .fa-handshake-angle {
   .restaurants__flex {
     display: flex;
     flex-direction: row;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin: 0 75px 0 75px;
   }
 }
 .restaurants__card {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 0 20px 20px;
 }
 .restaurants__figure {
   width: 100%;
@@ -350,15 +345,15 @@ footer .fa-handshake-angle {
   content: "Nouveau";
   background-color: #99E2D0;
   position: absolute;
-  top: 4%;
-  right: 2%;
+  top: 6%;
+  right: 3%;
   display: block;
   color: green;
-  width: 65px;
-  height: 16px;
+  width: 75px;
+  height: 20px;
   text-align: center;
-  padding-top: 2px;
-  font-size: 12px;
+  padding-top: 5px;
+  font-size: 14px;
   border-radius: 4%;
   font-weight: bold;
 }
@@ -371,11 +366,10 @@ footer .fa-handshake-angle {
 .restaurants__captions {
   margin-left: 10px;
   font-weight: 800;
-  padding-top: 13px;
-  padding-bottom: 5px;
+  padding: 13px 0 5px 0;
   text-decoration: none;
   border: none;
-  color: black;
+  color: #000000;
 }
 .restaurants__name {
   margin: 0;
@@ -435,14 +429,13 @@ footer .fa-handshake-angle {
 .fa-list,
 .fa-store {
   color: #7E7E7E;
-  margin-right: 15px;
-  margin-left: 10px;
+  margin: 0 15px 0 10px;
 }
 
 .fa-1,
 .fa-2,
 .fa-3 {
-  color: white;
+  color: #ffffff;
   width: 20px;
   height: 20px;
   border: 0px inset #9356DC;
@@ -461,10 +454,10 @@ footer .fa-handshake-angle {
 }
 
 .bg-white {
-  background-color: white;
+  background-color: #ffffff;
   height: 250px;
   width: 90%;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .img-restaurant__top {
@@ -479,7 +472,7 @@ footer .fa-handshake-angle {
 }
 
 .menu-list-333 {
-  height: 970px;
+  height: 1025px;
   border-radius: 30px 30px 0 0;
   margin-top: -30px;
 }
@@ -526,9 +519,9 @@ footer .fa-handshake-angle {
 }
 
 .menu-list-433 {
-  height: 1030px;
+  height: 1070px;
   border-radius: 30px 30px 0 0;
-  margin-top: 0px;
+  margin-top: -30px;
 }
 .menu-list-433__menu-card--1 {
   animation: fade-in 1s linear both;
@@ -577,17 +570,14 @@ footer .fa-handshake-angle {
 }
 
 .restaurant {
-  padding-left: 15px;
-  margin-top: 0px;
-  padding-top: 10px;
+  padding: 10px 0 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .restaurant__title {
   font-size: 26px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin: 15px 0 10px 10px;
 }
 @media all and (min-width: 1024px) {
   .restaurant__title {
@@ -643,8 +633,7 @@ footer .fa-handshake-angle {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 6px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: 0 70px 0 70px;
   }
 }
 .submenus__plate {
@@ -654,28 +643,26 @@ footer .fa-handshake-angle {
   margin-bottom: 10px;
 }
 .submenus__name {
-  padding-top: 10px;
-  padding-left: 5px;
+  padding: 10px 0 0 10px;
   font-weight: 700;
 }
 .submenus__details {
-  padding-top: 5px;
-  padding-left: 5px;
+  padding: 5px 0 0 10px;
   font-size: 12px;
   font-weight: 400;
 }
 .submenus__price {
   float: right;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding: 0 10px 10px 0;
   font-weight: 500;
 }
 
 .bg-white-menu {
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13);
   display: flex;
-  background-color: white;
+  background-color: #ffffff;
   height: 60px;
-  border-radius: 15px;
+  border-radius: 25px;
   margin-right: 10px;
 }
 .bg-white-menu__description {
@@ -706,16 +693,15 @@ footer .fa-handshake-angle {
 
 @media all and (min-width: 1024px) {
   .bg-grey-simple {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: -30px 100px 0 100px;
   }
 }
 
 .fa-check {
   font-size: 0px;
   border-radius: 50%;
-  border: 2px solid white;
-  background-color: white;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
   color: #99E2D0;
 }
 

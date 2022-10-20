@@ -3,21 +3,21 @@
 }
 
 body {
-    margin: 0px;
+    margin: $zero-px;
 }
 
 p {
-    display: flex;
-    justify-content: center;
+    display: $flex;
+    justify-content: $left;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+    text-decoration: $none;
+    color:$color-black;
 
     &:visited {
-        text-decoration: none;
-        color: black;
+        text-decoration: $none;
+        color:$color-black;
     }
 }
 
@@ -28,33 +28,13 @@ h4 {
 
 .bg-grey {
     background-color: $color-gris-intro;
-    @include margin-fond-colore;
+    @include margin-fond-colored;
+    height: 275px;
 }
 
 .bg-grey-simple {
     background-color: $color-gris-intro;
-    position: sticky;
-}
-
-
-.flex-ligne-between {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.flex-colonne-between {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.flex-colonne {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    position: $sticky;
 }
 
 .title-font {
@@ -63,15 +43,35 @@ h4 {
 }
 
 .mail {
-    color: white;
+    color: $color-white;
 }
 
 .button {
-    margin-bottom: 30px;
-    text-align: center;
-
+    text-align: $center;
 }
 
-p {
-    justify-content: left;
-}
+.container {
+    max-width: 1280px;
+    margin: $auto;
+    position: $relative;
+  }
+
+  // .flex-line-between {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     align-content: space-between;
+// }
+
+// .flex-column-between {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     align-content: space-between;
+// }
+
+// .flex-column {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+// }

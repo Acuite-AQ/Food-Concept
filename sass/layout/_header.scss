@@ -1,13 +1,13 @@
 .section-header {
-    display: flex;
+    display:$flex;
 
     .arrow-return {
-        display: flex;
-        align-items: center;
+        display:$flex;
+        align-items: $center;
         font-size: 18px;
         margin-left: 20px;
 
-        @media all and (min-width: 1024px) {
+        @media all and (min-width: $media-desktop) {
             margin-left: 70px;
             font-size: 28px;
         }
@@ -15,9 +15,9 @@
 }
 
 .logo-header {
-    display: flex;
+    display:$flex;
     @include margin-side;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 5px;
     max-width: 40%;
 }
