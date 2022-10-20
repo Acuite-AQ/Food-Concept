@@ -1,5 +1,5 @@
 .button__explore {
-    width: 200px;
+    width: 180px;
     @include margin-side;
     background: $color-gradient;
     border: $button-border;
@@ -15,7 +15,7 @@
 }
 
 .button__command {
-    margin-top: 20px;
+    margin-top: 35px;
     width: 165px;
     @include margin-side;
     background: $color-gradient;

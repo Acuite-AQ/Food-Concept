@@ -75,7 +75,7 @@ h4 {
   background-color: #F6F6F6;
   margin-left: -10px;
   margin-right: -10px;
-  height: 275px;
+  height: 260px;
 }
 
 .bg-grey-simple {
@@ -103,7 +103,7 @@ h4 {
 }
 
 .button__explore {
-  width: 200px;
+  width: 180px;
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -119,7 +119,7 @@ h4 {
 }
 
 .button__command {
-  margin-top: 20px;
+  margin-top: 35px;
   width: 165px;
   margin-left: auto;
   margin-right: auto;
@@ -142,7 +142,8 @@ h4 {
   display: flex;
   align-items: center;
   font-size: 18px;
-  margin-left: 20px;
+  margin-left: 25px;
+  padding-top: 10px;
 }
 @media all and (min-width: 1024px) {
   .section-header .arrow-return {
@@ -150,14 +151,26 @@ h4 {
     font-size: 28px;
   }
 }
+@media all and (min-width: 700px) {
+  .section-header .arrow-return {
+    font-size: 24px;
+  }
+}
 
 .logo-header {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 75px;
+  margin-right: 95px;
   padding-top: 25px;
   padding-bottom: 5px;
   max-width: 40%;
+  margin-bottom: 8px;
+}
+@media all and (min-width: 700px) {
+  .logo-header {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 footer {
@@ -232,9 +245,12 @@ footer .fa-handshake-angle {
   margin-left: -10px;
   margin-right: -10px;
   justify-content: center;
-  padding: 10px 0 10px;
-  margin: 8px 0 0;
-  box-shadow: inset 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+  padding: 12px 0 10px;
+  margin: 0;
+  box-shadow: inset 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  height: 25px;
+  text-align: center;
+  font-weight: 500;
 }
 .location__logo-gps {
   margin-right: 15px;
@@ -243,20 +259,26 @@ footer .fa-handshake-angle {
 .intro {
   padding: 10px 0 0;
 }
-.intro__homepage-title {
-  padding-top: 20px;
-}
-.intro__homepage-title, .intro__homepage-welcome {
+.intro__homepage-welcome {
   justify-content: center;
   text-align: center;
   margin: 5px 0 25px;
   padding: 20px 30px 0 30px;
+  font-weight: 400;
+}
+.intro__homepage-title {
+  justify-content: center;
+  text-align: center;
+  padding: 20px 50px 0 50px;
+  margin: 0px;
+  font-weight: 900;
 }
 
 .tutorial {
   margin: 0 10px 60px 10px;
 }
 .tutorial__title {
+  font-weight: 900;
   padding-top: 25px;
 }
 @media all and (min-width: 1024px) {
@@ -316,7 +338,8 @@ footer .fa-handshake-angle {
   }
 }
 .restaurants__title {
-  margin-left: 25px;
+  margin-left: 20px;
+  font-weight: 900;
 }
 @media all and (min-width: 1024px) {
   .restaurants__title {
@@ -373,6 +396,7 @@ footer .fa-handshake-angle {
 }
 .restaurants__name {
   margin: 0;
+  font-size: 18px;
 }
 .restaurants__location {
   margin-left: 10px;
@@ -458,6 +482,7 @@ footer .fa-handshake-angle {
   height: 250px;
   width: 92%;
   border-radius: 25px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13);
 }
 @media all and (min-width: 700px) {
   .bg-white {
@@ -482,7 +507,7 @@ footer .fa-handshake-angle {
 }
 
 .menu-list-333 {
-  height: 1025px;
+  height: 1015px;
   border-radius: 30px 30px 0 0;
   margin-top: -30px;
 }
@@ -600,12 +625,12 @@ footer .fa-handshake-angle {
   padding: 0;
   width: 18px;
   height: 28px;
-  margin-right: 15px;
+  margin-right: 30px;
   font-size: 24px;
 }
 .restaurant__like:hover .heart-bg {
   position: absolute;
-  right: 15px;
+  right: 30px;
   top: 35px;
   visibility: visible;
   opacity: 100;
