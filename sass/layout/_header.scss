@@ -12,22 +12,36 @@
             margin-left: 70px;
             font-size: 28px;
         }
-        @media all and (min-width: $media-tablette) {
+        @media all and (min-width: $media-tablet) {
             font-size: 24px;
         }
     }
 }
 
-.logo-header {
+.logo-header-homepage {
+    display:$flex;
+    // @include margin-side;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    max-width: 40%;
+    margin-bottom: 8px;
+    @media all and (min-width: $media-tablet) {
+        @include margin-side;
+    }
+}
+
+.logo-header-restaurants {
     display:$flex;
     // @include margin-side;
     margin-left: 75px;
     margin-right: 95px;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 5px;
     max-width: 40%;
     margin-bottom: 8px;
-    @media all and (min-width: $media-tablette) {
+    @media all and (min-width: $media-tablet) {
         @include margin-side;
     }
 }

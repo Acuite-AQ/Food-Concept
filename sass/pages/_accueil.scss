@@ -306,7 +306,7 @@
     width: 92%;
     border-radius:$radius;
     box-shadow:5px 5px 8px rgb(0 0 0 / 13%);
-    @media all and (min-width: $media-tablette) {
+    @media all and (min-width: $media-tablet) {
         width:auto;
     }
     @media all and (min-width: $media-desktop) {

@@ -77,6 +77,11 @@ h4 {
   margin-right: -10px;
   height: 260px;
 }
+@media all and (min-width: 700px) {
+  .bg-grey {
+    height: 200px;
+  }
+}
 
 .bg-grey-simple {
   background-color: #F6F6F6;
@@ -157,17 +162,33 @@ h4 {
   }
 }
 
-.logo-header {
+.logo-header-homepage {
   display: flex;
-  margin-left: 75px;
-  margin-right: 95px;
-  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
   padding-bottom: 5px;
   max-width: 40%;
   margin-bottom: 8px;
 }
 @media all and (min-width: 700px) {
-  .logo-header {
+  .logo-header-homepage {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logo-header-restaurants {
+  display: flex;
+  margin-left: 75px;
+  margin-right: 95px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  max-width: 40%;
+  margin-bottom: 8px;
+}
+@media all and (min-width: 700px) {
+  .logo-header-restaurants {
     margin-left: auto;
     margin-right: auto;
   }
@@ -193,7 +214,7 @@ footer .fa-handshake-angle {
 }
 @media all and (min-width: 1024px) {
   footer {
-    padding-left: 190px;
+    padding-left: 100px;
   }
   footer .logo-footer {
     max-width: 8%;
@@ -602,7 +623,7 @@ footer .fa-handshake-angle {
 }
 @media all and (min-width: 1024px) {
   .menu-list-433 {
-    height: 500px;
+    height: 540px;
   }
 }
 
@@ -757,7 +778,7 @@ footer .fa-handshake-angle {
 
 @media all and (min-width: 1024px) {
   .bg-grey-simple {
-    margin: -30px 100px 0 100px;
+    margin: -30px 10px 0 10px;
   }
 }
 
